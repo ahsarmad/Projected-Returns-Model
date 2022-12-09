@@ -101,5 +101,9 @@ extension SearchTableViewController: UISearchResultsUpdating, UISearchController
         guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
         self.searchQuery = searchQuery
     }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+    mode = .search
+    }
 }
 
