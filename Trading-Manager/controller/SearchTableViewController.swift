@@ -9,6 +9,11 @@ import Combine
 
 class SearchTableViewController: UITableViewController {
     
+    private enum Mode {
+        case onBoarding
+        case search
+    }
+    
     private lazy var searchController : UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
         sc.searchResultsUpdater = self
@@ -24,11 +29,13 @@ class SearchTableViewController: UITableViewController {
     private let apiService = APISERVICE()
     private var subscribers = Set<AnyCancellable>()
     private var searchResults: SearchResults?
+    @Published private var mode: Mode = .onBoarding
     @Published private var searchQuery = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpTableView()
         observeForm()
         
     }
@@ -36,22 +43,40 @@ class SearchTableViewController: UITableViewController {
     
     private func setUpNavigationBar() {
         navigationItem.searchController = searchController
+        navigationItem.title = "Search"
+    }
+    
+    
+    private func setUpTableView(){
+        tableView.tableFooterView = UIView()
     }
     
     private func observeForm() {
         $searchQuery.debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink{ [unowned self](searchQuery) in
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
-                       switch completion {
-                       case .failure(let error):
-                           print(error.localizedDescription)
-                       case .finished: break
-                       }
-                   } receiveValue: { (searchResults) in
-                       self.searchResults = searchResults
-                       self.tableView.reloadData()
-                   }.store(in: &self.subscribers)
+                    switch completion {
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    case .finished: break
+                    }
+                } receiveValue: { (searchResults) in
+                    self.searchResults = searchResults
+                    self.tableView.reloadData()
+                }.store(in: &self.subscribers)
             }.store(in: &subscribers)
+            
+        $mode.sink{[unowned self](mode) in
+            switch mode {
+            case .onBoarding:
+                self.tableView.backgroundView = SearchPlaceHolderView()
+//                let redView = UIView()
+//                redView.backgroundColor = .red
+//                self.tableView.backgroundView = redView
+            case.search:
+                self.tableView.backgroundView = nil
+            }
+        }.store(in: &subscribers)
     }
 
     
@@ -77,6 +102,10 @@ extension SearchTableViewController: UISearchResultsUpdating, UISearchController
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
         self.searchQuery = searchQuery
+    }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+    mode = .search
     }
 }
 
