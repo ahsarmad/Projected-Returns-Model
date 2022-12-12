@@ -3,6 +3,8 @@ import UIKit
 class DateSelectionTableViewController: UITableViewController {
 
     var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
+
+    var selectedIndex: Int?
     private var monthInfos: [MonthInfo] = []
 
     var didSelectDate: ((Int) -> Void)?
@@ -41,13 +43,14 @@ extension DateSelectionTableViewController {
             DateSelectionTableViewCell
         let index = indexPath.item
         let monthInfo = monthInfos[index]
-        cell.configure(with: monthInfo, index: index)
+        let isSelected = index == selectedIndex
+        cell.configure(with: monthInfo, index: index, isSelected: isSelected)
         return cell
     }   
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectDate?(indexPath.item)
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true) 
      }
 }
 
@@ -57,10 +60,10 @@ class DateSelectionTableViewCell: UITableViewCell {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var monthsAgoLabel: UILabel!
 
-    func configure (with monthInfo: MonthInfo, index: Int) {
+    func configure (with monthInfo: MonthInfo, index: Int, isSelected: Bool ) {
 
         monthLabel.text = monthInfo.date.MMYYFormat
-
+        accessoryType = isSelected ? .checkmark : .none
         if index == 1 {
             monthsAgoLabel.text = "! month ago"
         } else if index > 1 {
