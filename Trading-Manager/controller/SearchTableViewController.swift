@@ -14,7 +14,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         sc.searchResultsUpdater = self
         sc.delegate = self
         sc.obscuresBackgroundDuringPresentation = false
-        sc.searchBar.placeholder = "Enter a company name or symbol"
+        sc.searchBar.placeholder = "Enter company name or ticker"
         sc.searchBar.autocapitalizationType = .allCharacters
         return sc
     }()
