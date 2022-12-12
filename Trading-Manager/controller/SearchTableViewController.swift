@@ -110,7 +110,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
             self?.performSegue(withIdentifier: "showCalculator", sender: asset)
             self?.searchController.searchBar.text = nil
-        }.store(in: &subscribers)
+        }.store(in:&subscribers)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

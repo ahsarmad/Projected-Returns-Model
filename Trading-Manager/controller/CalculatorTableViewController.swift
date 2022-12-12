@@ -46,10 +46,10 @@ class CalculatorTableViewController: UITableViewController {
         navigationItem.title = asset?.searchResult.symbol
         symbolLabel.text = asset?.searchResult.symbol
         nameLabel.text = asset?.searchResult.name
-        investmentAmountCurrencyLabel.text = asset?.searchResult.currency
-        currencyLabels.forEach { (label) in
-            label.text = asset?.searchResult.currency.addBrackets()
-        }
+//        investmentAmountCurrencyLabel.text = asset?.searchResult.currency
+//        currencyLabels.forEach { (label) in
+//            label.text = asset?.searchResult.currency.addBrackets()
+//        }
     }
     
     private func setupTextFields() {
@@ -105,11 +105,11 @@ class CalculatorTableViewController: UITableViewController {
             this.currentValueLabel.backgroundColor = presentation.currentValueLabelBackgroundColor
             this.currentValueLabel.text = presentation.currentValue
             this.investmentAmountLabel.text = presentation.investmentAmount
-            this.gainLabel.text = presentation.gain
-            this.yieldLabel.text = presentation.yield
-            this.yieldLabel.textColor = presentation.yieldLabelTextColor
-            this.annualReturnLabel.text = presentation.annualReturn
-            this.annualReturnLabel.textColor = presentation.annualReturnLabelTextColor
+//            this.gainLabel.text = presentation.gain
+//            this.yieldLabel.text = presentation.yield
+//            this.yieldLabel.textColor = presentation.yieldLabelTextColor
+//            this.annualReturnLabel.text = presentation.annualReturn
+//            this.annualReturnLabel.textColor = presentation.annualReturnLabelTextColor
             
         }.store(in: &subscribers)
         
@@ -140,10 +140,10 @@ class CalculatorTableViewController: UITableViewController {
     
     private func resetViews() {
         currentValueLabel.text = "0.00"
-        investmentAmountLabel.text = "0.00"
-        gainLabel.text = "-"
-        yieldLabel.text = "-"
-        annualReturnLabel.text = "-"
+//        investmentAmountLabel.text = "0.00"
+//        gainLabel.text = "-"
+//        yieldLabel.text = "-"
+//        annualReturnLabel.text = "-"
     }
     
     @IBAction func dateSliderDidChange(_ sender: UISlider) {
