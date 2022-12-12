@@ -153,109 +153,28 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fsT-L3-Iqk">
-                                                            <rect key="frame" x="0.0" y="44" width="382" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="44" width="382" height="33"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-cE-tMJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="22.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="33"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                                     <color key="textColor" systemColor="systemGreenColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk0-Wj-WU0">
-                                                                    <rect key="frame" x="31" y="0.0" width="351" height="22.5"/>
+                                                                    <rect key="frame" x="31" y="0.0" width="351" height="33"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nKT-F4-5JZ">
-                                                            <rect key="frame" x="0.0" y="70.5" width="382" height="16.5"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Z6T-t7-6Mp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="16.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-eV-2y8">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="105.5" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktX-HX-E66">
-                                                                            <rect key="frame" x="109.5" y="0.0" width="217.5" height="16.5"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        </view>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZT-zq-EzM">
-                                                                            <rect key="frame" x="331" y="0.0" width="25" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AET-e8-lK8">
-                                                                            <rect key="frame" x="360" y="0.0" width="22" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nKT-F4-5JZ">
+                                                            <rect key="frame" x="0.0" y="81" width="382" height="0.0"/>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-8e-6DJ">
-                                                            <rect key="frame" x="0.0" y="91" width="382" height="16.5"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="y3y-B3-v1d">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="16.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zj3-Rs-S9t">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="26" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOT-ZY-BEE">
-                                                                            <rect key="frame" x="30" y="0.0" width="229" height="16.5"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        </view>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$100.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-RR-60z">
-                                                                            <rect key="frame" x="263" y="0.0" width="55.5" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+10.25%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvn-ET-2g3">
-                                                                            <rect key="frame" x="322.5" y="0.0" width="59.5" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                                            <color key="textColor" systemColor="systemGreenColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-8e-6DJ">
+                                                            <rect key="frame" x="0.0" y="85" width="382" height="0.0"/>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHE-Me-icf">
-                                                            <rect key="frame" x="0.0" y="111.5" width="382" height="16.5"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8Q-kg-Iuv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="16.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual return" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cH-LH-Kd0">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paT-U6-nGK">
-                                                                            <rect key="frame" x="75" y="0.0" width="270.5" height="16.5"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        </view>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9F9-mW-exF">
-                                                                            <rect key="frame" x="345.5" y="0.0" width="36.5" height="16.5"/>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
-                                                                            <color key="textColor" systemColor="systemGreenColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHE-Me-icf">
+                                                            <rect key="frame" x="0.0" y="89" width="382" height="39"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -401,18 +320,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3Bu-BE-JTP"/>
                     <connections>
-                        <outlet property="annualReturnLabel" destination="9F9-mW-exF" id="jfb-XY-1ai"/>
                         <outlet property="currentValueLabel" destination="dHb-cE-tMJ" id="phj-ox-K0B"/>
                         <outlet property="dateSlider" destination="Ea5-P9-yvo" id="7df-MX-OYe"/>
-                        <outlet property="gainLabel" destination="bU1-RR-60z" id="Mcc-LI-HXF"/>
                         <outlet property="initialDateOfInvestmentTextField" destination="R5W-P9-rOy" id="6eq-qZ-EJu"/>
                         <outlet property="initialInvestmentAmountTextField" destination="s1U-Ls-fc2" id="5Rm-zG-Veu"/>
-                        <outlet property="investmentAmountCurrencyLabel" destination="SZT-zq-EzM" id="uaG-ov-kKo"/>
-                        <outlet property="investmentAmountLabel" destination="AET-e8-lK8" id="g8b-8v-2qk"/>
                         <outlet property="monthlyDollarCostAveragingTextField" destination="cAs-7L-Ljn" id="ivP-IY-lfF"/>
                         <outlet property="nameLabel" destination="Mfi-Gt-TOK" id="cg8-Pd-Lx6"/>
                         <outlet property="symbolLabel" destination="nug-Uc-LeW" id="YxJ-Va-1vp"/>
-                        <outlet property="yieldLabel" destination="Fvn-ET-2g3" id="2gk-Yr-Sjz"/>
                         <outletCollection property="currencyLabels" destination="5yR-RY-dH0" collectionClass="NSMutableArray" id="quk-ib-GHc"/>
                         <outletCollection property="currencyLabels" destination="Olg-ay-hR0" collectionClass="NSMutableArray" id="qKU-dc-KOX"/>
                         <outletCollection property="currencyLabels" destination="IfA-h4-AhI" collectionClass="NSMutableArray" id="LNE-y1-mSi"/>

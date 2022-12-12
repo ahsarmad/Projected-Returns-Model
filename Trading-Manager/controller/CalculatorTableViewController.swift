@@ -104,7 +104,7 @@ class CalculatorTableViewController: UITableViewController {
                         
             this.currentValueLabel.backgroundColor = presentation.currentValueLabelBackgroundColor
             this.currentValueLabel.text = presentation.currentValue
-            this.investmentAmountLabel.text = presentation.investmentAmount
+//            this.investmentAmountLabel.text = presentation.investmentAmount
 //            this.gainLabel.text = presentation.gain
 //            this.yieldLabel.text = presentation.yield
 //            this.yieldLabel.textColor = presentation.yieldLabelTextColor
