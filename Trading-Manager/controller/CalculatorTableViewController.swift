@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 class CalculatorTableViewController: UITableViewController {
 
@@ -9,16 +10,21 @@ class CalculatorTableViewController: UITableViewController {
     @IBOutlet weak var assetNameLabel: UILabel! 
     @IBOutlet var currencyLabel: [UILabel]!
     @IBOutlet weak var investmentAmountCurrencyLabel: UILabel!
+    @IBOutlet weak var dateSlider: UISlider!
 
     var asset: Asset?
 
-    private var initialDateOfInvestmentIndex: Int?
+   @Published private var initialDateOfInvestmentIndex: Int?
+
+   private var subscribers = Set<AnyCancellable>()
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
         setUpViews()
         setUpTextFields()
+        setUpDateSlider()
+        observeForm()
     }
 
     private func setUpViews() {
@@ -36,6 +42,22 @@ class CalculatorTableViewController: UITableViewController {
         initialDateOfInvestmentTextField.delegate = self
           
     } 
+
+    private func setUpDateSlider () {
+        if let count = asset?.timeSeriesMonthlyAdjusted.getMonthInfos().count {
+            dateSlider.maximumValue = count.floatValue
+        }
+    }
+
+    private func observeForm() {
+        $initialDateOfInvestmentIndex.sink {[weak self] (index) in 
+            guard let index = index else { return }
+            self?.dateSlider.value = index.floatValue
+            if let dateString = self?.asset?.timeSeriesMonthlyAdjusted.getMonthInfos()[index].date.MMYYFormat {
+                self?.initialDateOfInvestmentTextField.text = dateString
+            }
+        }.store( in: &subscribers )
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDateSelection",
@@ -59,6 +81,10 @@ class CalculatorTableViewController: UITableViewController {
             let dateString = monthInfo.date.MMYYFormat
             initialDateOfInvestmentTextField.text = dateString
         }
+     }
+
+     @IBAction func dateSliderDidChange(_sender: UISlider) {
+        initialDateOfInvestmentIndex = Int(sender.value)
      }
 
 }
