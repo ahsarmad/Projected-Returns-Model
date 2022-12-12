@@ -55,6 +55,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     private func observeForm() {
         $searchQuery.debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink{ [unowned self](searchQuery) in
+                guard !searchQuery.isEmpty else { return }
                 showLoadingAnimation()
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
                     hideLoadingAnimation()
@@ -73,9 +74,6 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             switch mode {
             case .onBoarding:
                 self.tableView.backgroundView = SearchPlaceHolderView()
-//                let redView = UIView()
-//                redView.backgroundColor = .red
-//                self.tableView.backgroundView = redView
             case.search:
                 self.tableView.backgroundView = nil
             }
@@ -87,7 +85,8 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         return searchResults?.items.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> 
+    UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as!
         SearchTableViewCell
         if let searchResults = self.searchResults {
@@ -96,6 +95,10 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
 
         }
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCalculator", sender: nil)
     }
 
 }
