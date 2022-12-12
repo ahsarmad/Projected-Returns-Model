@@ -35,6 +35,14 @@ class CalculatorTableViewController: UITableViewController {
           
     } 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDateSelection",
+            let dateSelectionTableViewController = segue.destination as? DateSelectionTableViewController, 
+            let timeSeriesMonthlyAdjusted = sender as? TimeSeriesMonthlyAdjusted {
+                dateSelectionTableViewController.timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted
+            }
+     }
+
 }
 
 
