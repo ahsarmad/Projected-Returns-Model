@@ -47,6 +47,9 @@ class CalculatorTableViewController: UITableViewController {
      }
 
      private func handleDateSelection(at index: Int) {
+
+        guard navigationController?.visibleViewController is DateSelectionTableViewController else { return }
+        navigationController?.popViewController(animated: true)
         if let monthInfos = asset?.timeSeriesMonthlyAdjusted.getMonthInfos() {
             let monthInfo = monthInfos[index]
             let dateString = monthInfo.date.MMYYFormat
