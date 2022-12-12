@@ -115,7 +115,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
                 case .finished: break
             }
         } receiveValue: {(timeSeriesMonthlyAdjusted) in 
-        print("success: \(timeSeriesMonthlyAdjusted)")
+        print("success: \(timeSeriesMonthlyAdjusted.getMonthInfos())")
         }.store(in: &subscribers)
 
         // performSegue(withIdentifier: "showCalculator", sender: nil)
