@@ -2,8 +2,8 @@ import UIKit
 
 extension UIColor {
     
-    static let themeRedShade = UIColor("fae2e1")
-    static let themeGreenShade = UIColor("b0f1dd")
+    static let themeRedShade = UIColor("ffffff")
+    static let themeGreenShade = UIColor("ffffff")
     
     convenience init(_ hex: String, alpha: CGFloat = 1.0) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
