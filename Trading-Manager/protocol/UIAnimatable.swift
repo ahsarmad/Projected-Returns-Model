@@ -6,17 +6,18 @@ protocol UIAnimatable where Self: UIViewController {
     func hideLoadingAnimation()
 }
 
-
 extension UIAnimatable {
+    
     func showLoadingAnimation() {
-        DispatchQueue.main.async{
-        MBProgressHUD.showAdded(to: self.view, animated: true)
+        DispatchQueue.main.async {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
         }
-
+        
     }
+    
     func hideLoadingAnimation() {
-        DispatchQueue.main.async{
-         MBProgressHUD.hide(for: self.view, animated: true)
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
 }

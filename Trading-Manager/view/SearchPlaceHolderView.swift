@@ -1,26 +1,20 @@
-//
-//  SearchPlaceHolderView.swift
-//  Trading-Manager
-//
-//
-
 import UIKit
 
-class SearchPlaceHolderView: UIView {
+class SearchPlaceholderView: UIView {
     
     private let imageView: UIImageView = {
         let image = UIImage(named: "man-pulling-trend")
         let imageView = UIImageView()
         imageView.image = image
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Search for a company to calculate the potential return via dca"
-        label.font = UIFont(name: "Nunito-SemiBold", size: 15)!
-        label.numberOfLines =  0
+        label.text = "Calculate your potential return using Dollar Cost Averaging!"
+        label.font = UIFont(name: "AvenirNext-Medium", size: 20)!
+        label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()
@@ -28,28 +22,28 @@ class SearchPlaceHolderView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 24
+        stackView.spacing = 80
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpViews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setUpViews() {
+    private func setupViews() {
         addSubview(stackView)
         NSLayoutConstraint.activate([
-            stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1),
+            stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 300)
-        ]
-        )
+            imageView.heightAnchor.constraint(equalToConstant: 160)
+        ])
     }
+    
 }
