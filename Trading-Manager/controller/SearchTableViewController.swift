@@ -107,16 +107,18 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
 
     private func handleSelection(for symbol: String, searchResult: SearchResult) {
-
+        showLoadingAnimation()
         apiService.fetchTimeSeriesMonthlyAdjustedPublisher(keywords: symbol). sink {
+            [weak self]
             (completionResult) in 
+            self?.hideLoadingAnimation()
             switch completionResult {
                 case .failure(let error):
                     print(error)
                 case .finished: break
             }
         } receiveValue: {[weak self](timeSeriesMonthlyAdjusted) in 
-
+            self?.hideLoadingAnimation()
             let asset = Asset(searchResult: SearchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
             self?.performSegue(withIdentifier: "showCalculator", sender: asset)
 
