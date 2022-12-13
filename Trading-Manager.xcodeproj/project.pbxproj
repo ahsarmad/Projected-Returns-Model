@@ -32,12 +32,6 @@
 		56854BB6294797BD00E92446 /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56854BB5294797BD00E92446 /* CalculatorPresenter.swift */; };
 		56854BB8294797D500E92446 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56854BB7294797D500E92446 /* DCAService.swift */; };
 		56C7E9B12943FC9A00EAB715 /* SearchPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7E9B02943FC9A00EAB715 /* SearchPlaceHolderView.swift */; };
-		56C7E9BC2944115F00EAB715 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9B529440EAD00EAB715 /* Quicksand-SemiBold.ttf */; };
-		56C7E9BD2944116300EAB715 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9B329440E8E00EAB715 /* Quicksand-Regular.ttf */; };
-		56C7E9C02944132300EAB715 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9BF2944132300EAB715 /* Nunito-SemiBold.ttf */; };
-		56C7E9C12944132500EAB715 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9BE2944131400EAB715 /* Nunito-Regular.ttf */; };
-		56C7E9C82944156200EAB715 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9C62944156200EAB715 /* OpenSans-SemiBold.ttf */; };
-		56C7E9C92944156200EAB715 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C7E9C72944156200EAB715 /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,12 +62,6 @@
 		56854BB5294797BD00E92446 /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
 		56854BB7294797D500E92446 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
 		56C7E9B02943FC9A00EAB715 /* SearchPlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceHolderView.swift; sourceTree = "<group>"; };
-		56C7E9B329440E8E00EAB715 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "../../../../../devstuff/native/mock-recipy/assets/untitled folder/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
-		56C7E9B529440EAD00EAB715 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "../../../../../devstuff/native/proj2Login/android/app/build/intermediates/assets/debug/mergeDebugAssets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
-		56C7E9BE2944131400EAB715 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Regular.ttf"; path = "../../../../../devstuff/native/navigation-test/assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
-		56C7E9BF2944132300EAB715 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "../../../../../devstuff/native/navigation-test/assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		56C7E9C62944156200EAB715 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "../../../../../../Library/Fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		56C7E9C72944156200EAB715 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../Library/Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		BB782FC20182E57C4E7A8482 /* Pods-Trading-Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading-Manager.release.xcconfig"; path = "Target Support Files/Pods-Trading-Manager/Pods-Trading-Manager.release.xcconfig"; sourceTree = "<group>"; };
 		F4548F6C8D81CB95D625E66B /* Pods-Trading-Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trading-Manager.debug.xcconfig"; path = "Target Support Files/Pods-Trading-Manager/Pods-Trading-Manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +149,6 @@
 			children = (
 				56854BAE29478E6200E92446 /* protocol */,
 				56854B9D29478BD300E92446 /* extensions */,
-				56C7E9B229440E6100EAB715 /* fonts */,
 				567201BA2942C19A002B26EE /* model */,
 				567201B72942BEA9002B26EE /* service */,
 				567201B32942BC27002B26EE /* view */,
@@ -195,19 +182,6 @@
 				56854BAF29478E8900E92446 /* UIAnimatable.swift */,
 			);
 			path = protocol;
-			sourceTree = "<group>";
-		};
-		56C7E9B229440E6100EAB715 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				56C7E9B329440E8E00EAB715 /* Quicksand-Regular.ttf */,
-				56C7E9B529440EAD00EAB715 /* Quicksand-SemiBold.ttf */,
-				56C7E9C72944156200EAB715 /* OpenSans-Regular.ttf */,
-				56C7E9C62944156200EAB715 /* OpenSans-SemiBold.ttf */,
-				56C7E9BE2944131400EAB715 /* Nunito-Regular.ttf */,
-				56C7E9BF2944132300EAB715 /* Nunito-SemiBold.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		D3C284E2DF20A8AFCCD85E75 /* Pods */ = {
@@ -279,15 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C7E9C92944156200EAB715 /* OpenSans-Regular.ttf in Resources */,
-				56C7E9C02944132300EAB715 /* Nunito-SemiBold.ttf in Resources */,
-				56C7E9C82944156200EAB715 /* OpenSans-SemiBold.ttf in Resources */,
 				56749034294276120062809D /* LaunchScreen.storyboard in Resources */,
-				56C7E9C12944132500EAB715 /* Nunito-Regular.ttf in Resources */,
 				56749031294276120062809D /* Assets.xcassets in Resources */,
-				56C7E9BD2944116300EAB715 /* Quicksand-Regular.ttf in Resources */,
 				567201B2294279AC002B26EE /* Podfile in Resources */,
-				56C7E9BC2944115F00EAB715 /* Quicksand-SemiBold.ttf in Resources */,
 				5674902F2942760E0062809D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@ import UIKit
 class SearchPlaceholderView: UIView {
     
     private let imageView: UIImageView = {
-        let image = UIImage(named: "man-pulling-trend")
+        let image = UIImage(named: "man-pull-trend")
         let imageView = UIImageView()
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
